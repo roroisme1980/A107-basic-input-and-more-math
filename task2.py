@@ -24,3 +24,13 @@ Your final amount is $39152.94
 You earned $14152.94 interest
 ```
 '''
+p=(float(input("Enter the principal ")))
+Ai=(float(input("Enter the annual intrest rate in percent ")))
+CoPi=(float(input("Enter the number of compounding periods in a year ")))
+T=(float(input("Enter the number of years ")))
+Fa=(p*((1+((Ai/100)/CoPi))**(CoPi*T)))
+Ti=Fa-p
+Far=round(Fa,2)
+Tir=round(Ti,2)
+print(f"Your final amout is ${Far}")
+print(f"You earned ${Tir} in interest")

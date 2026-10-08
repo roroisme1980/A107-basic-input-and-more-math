@@ -18,3 +18,9 @@ Enter actual : 14
 The percent difference is 16.67%
 ```
 '''
+import math 
+Eo = (float(input("expected number ")))
+Ao = (float(input("the actual output ")))
+Pd = -100*(1.0-(Ao/Eo))
+Pd = round(Pd,2)
+print(f"the percent difference is {Pd}%")
