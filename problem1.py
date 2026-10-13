@@ -21,3 +21,27 @@ Enter your income: 125000
 Your federal income tax is: 24411.7
 
 '''
+income=float(input("Enter your income"))
+tier1=0
+tier2=0
+tier3=0
+tier4=0
+if income<49021:
+    tier1=income*0.15
+if income>49020:
+    tier1=49020*0.15
+    if income<98041:
+        tier2=(income-49020)*0.205
+    if income>98040:
+        tier2=(49020*0.205)
+        if income<151979:
+            tier3=(income-98040)*0.26
+        if income>151978:
+            tier3=(53938*0.26) 
+            if income<216512:
+              tier3=(income-151978)*0.29
+            if income>216511:
+              tier3=(64533*0.29) 
+              tier4=(income-216511)*33
+IT=round(tier1+tier2+tier3+tier4,2)
+print(f"Your federal income tax is: {IT}")

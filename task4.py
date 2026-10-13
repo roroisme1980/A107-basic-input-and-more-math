@@ -17,4 +17,6 @@ Enter a length in centimeters: 32
 """
 import math
 Lc=(float(input("Enter a length in centimeters ")))
-F= math.floor((Lc/))
+F= math.floor((Lc/2.54)/12)
+I=round((Lc/2.54)-(F*12))
+print(f"{Lc} centimeters is {F} feet and {I} inches")
